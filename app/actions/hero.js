@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
 
-import { 
+import {
 	GET_HERO_REQUEST,
 	GET_HERO_SUCCESS,
 	GET_HERO_FAILURE,
@@ -14,7 +14,6 @@ import {
 } from '../constants/api';
 
 export function getHero(id) {
-	console.log(BASE_URL, TS, API_PUBLIC, hashAPI);
 	return (dispatch) => {
 		dispatch({ type: GET_HERO_REQUEST });
 		return fetch(BASE_URL + '/v1/public/characters/'+ id + '?ts=' + TS + '&apikey=' + API_PUBLIC + '&hash=' + hashAPI, {
@@ -23,7 +22,7 @@ export function getHero(id) {
 	    	return res.json();
 	    })
 	    .then(response => {
-	    	dispatch({ type: GET_HERO_SUCCESS, payload: response.data.results });
+	      dispatch({ type: GET_HERO_SUCCESS, payload: response.data.results });
 	    })
 	    .catch(error => dispatch({ type: GET_HERO_FAILURE, error }));
 	}

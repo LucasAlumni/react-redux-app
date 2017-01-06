@@ -1,18 +1,17 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
- 
+import { PageHeader } from 'react-bootstrap';
+
 const App = ({ children }) =>
     <div>
-        <header>
-        	<h1>React-Redux App for vente-privé</h1>
-        </header>
+        <PageHeader>React-Redux App <small>for vente-privé</small></PageHeader>
         <section>
-    		{ children }
-    	</section>
+        { children }
+        </section>
     </div>;
 
 App.PropTypes = {
     children: PropTypes.object
 }
- 
+
 export default App;
