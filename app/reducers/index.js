@@ -5,9 +5,9 @@ import heroes from './heroes';
 import hero from './hero';
 
 const rootReducer = combineReducers({
-	heroes,
-	hero,
-	routing
+  heroes,
+  hero,
+  routing
 });
- 
+
 export default rootReducer;

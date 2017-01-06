@@ -6,14 +6,14 @@ import rootReducer from './reducers/index';
 const loggerMiddleware = createLogger();
 
 export default function configureStore(initialState) {
-    const store = createStore(
-        rootReducer,
-        initialState,
-        applyMiddleware(
-	      thunkMiddleware,
-	      loggerMiddleware
-	    )
-    );
+  const store = createStore(
+    rootReducer,
+    initialState,
+    applyMiddleware(
+      thunkMiddleware,
+      loggerMiddleware
+    )
+  );
 
-    return store;
+  return store;
 }

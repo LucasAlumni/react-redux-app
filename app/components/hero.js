@@ -39,12 +39,12 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-    name: PropTypes.string,
-    desc: PropTypes.string,
-    heroIsLoading: PropTypes.bool,
-    heroSeries: PropTypes.array,
-    heroComics: PropTypes.array,
-    getHero: PropTypes.func,
+  name: PropTypes.string,
+  desc: PropTypes.string,
+  heroIsLoading: PropTypes.bool,
+  heroSeries: PropTypes.array,
+  heroComics: PropTypes.array,
+  getHero: PropTypes.func,
 };
 
 function mapStateToProps(state) {
@@ -65,5 +65,5 @@ function mapStateToProps(state) {
 
 
 export default connect(mapStateToProps,
-    { getHero }
- )(Hero);
+  { getHero }
+)(Hero);
